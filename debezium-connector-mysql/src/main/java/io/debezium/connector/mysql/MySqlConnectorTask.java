@@ -180,7 +180,7 @@ public final class MySqlConnectorTask extends BaseSourceTask {
             // Check whether the row-level binlog is enabled ...
             final boolean binlogFormatRow = isBinlogFormatRow();
             final boolean binlogRowImageFull = isBinlogRowImageFull();
-            final boolean rowBinlogEnabled = binlogFormatRow && binlogRowImageFull;
+            final boolean rowBinlogEnabled = binlogFormatRow;// && binlogRowImageFull;
 
             ChainedReader.Builder chainedReaderBuilder = new ChainedReader.Builder();
 
